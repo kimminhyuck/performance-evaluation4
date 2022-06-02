@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarouselbxSlider 활용</title>
+    <!-- bxslider 플러그인 효과를 활용하기 위한 css 파일 -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+     <!--[if lt IE9]>
+        <script src="js/html5shiv.js"</script>
+    <![endif]-->
+<style>
+        #wrapper{
+                    /* 폭 600px */
+                    width: 600px;
+                    margin: 0 auto;
+        }
+
+</style>
+
+
+
+</head>
+<body>
+    <div id="wrapper">
+        <!-- bxslider 클래스 이름으로 구분해 줍니다.
+            그런데, bxslider 클래스 이름은 다른 이름으로 해도 됩니다. -->
+        <div class="bxslider">
+            <div>
+                <img src="images/city-1.jpg" alt="도시1">
+            </div>
+            <div>
+                <img src="images/city-2.jpg" alt="도시2">
+            </div>
+            <div>
+                <img src="images/city-3.jpg" alt="도시3">
+            </div>
+            <div>
+                <img src="images/city-4.jpg" alt="도시4">
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+            $(function(){
+                $('.bxslider').bxSlider({
+                    slideWidth:600,
+                    // 이미지 위에 택스트 올리기
+                    captions:true,
+                    // 슬라이드전환지속시간(다른 슬라이드를 전환되는 과정에서의 사이 시간)
+                    speed:1000,
+                    // 다음 전환까지 멈춰있는 시간(다음 슬라이드로 전환되기 전에 잠깐 멈춤 시간)
+                    pause:3000,
+                    // 자동 실행
+                    auto:true,
+                    // 컨트롤 버튼(재생/정지) 표시
+                    autoControls:true,
+                    stopAutoOnclick:true,
+                });
+
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

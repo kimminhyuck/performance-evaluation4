@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/jquery-1.12.3.js"></script>    
+    <!-- defer 속성은 script가 잠깐 지역 되도록 하여
+         HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함-->
+    <script src="javascript/script.js" defer type="text/javascript"></script>
+    <!-- [if lt IE9] -->
+    <!-- <script src="js/html5shiv.js"></script> -->
+    <!-- ![endif] -->
+</head>
+
+<body>
+ <div class="wrapper">
+    <header>
+        <div class="top">
+            <div class="logo">
+                <a href="#"><img src="images/로고사진.jpg" alt="로고 이미지"></a>
+            </div>
+            <nav class="menu">
+                <ul class="navi">
+                    <li>
+                        <a href="#">쇼핑몰소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">오직저희쇼핑몰만있는것</a></li>
+                            <li><a href="#">쇼핑몰오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이용안내</a>
+                        <ul class="submenu">
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">오프라인매장이용시간</a></li>
+                            <li><a href="#">이달의이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">특별공연</a>
+                        <ul class="submenu">
+                            <li><a href="#">특별관람예약</a></li>
+                            <li><a href="#">예약확인</a></li>
+                            <li><a href="#">예약취소</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">방문후기</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="bodywrap">
+        <div class="imgslide">
+            <a href="#">
+                <img src="images/쇼핑몰사진.jpg" alt="이미지1">
+                <span class="imgtext">5월5일 어린이날 SALE</span>                
+            </a>
+            <a href="#">
+                <img src="images/쇼핑몰사진2.jpg" alt="이미지2">
+                <span class="imgtext">5월8일 어버이날 SALE</span>
+            </a>
+            <a href="#">
+                <img src="images/쇼핑몰사진3.jpg" alt="이미지3">
+                <span class="imgtext">9월 29일 추석 SALE</span>                
+            </a>
+        </div>
+        <div class="contents">
+            <ul class="tabmenu">
+                <li class="active"><a href="#">공지사항</a>
+                    <div class="notice">
+                        <ul>
+                            <li><a href="#">
+                                [당첨자공지]이번달 판매왕 이벤트 당첨자
+                                <span>2022.05.22</span>
+                            </a></li>
+                            <li><a href="#">
+                                [당첨자공지]리뷰를 부탁해 이벤트 당첨자
+                                <span>2022.05.13</span>
+                            </a></li>
+                            <li><a href="#">
+                                [당첨자공지]이번달 구매왕 이벤트 당첨자
+                                <span>2022.05.10</span>
+                            </a></li>
+                            <li><a href="#">
+                                [오프라인 매장 OPEN] 제2호점오픈
+                                <span>2022.05.11</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">내부사진</a>
+                    <div class="gallery">
+                        <ul>
+                            <li><a href="#"><img src="images/내부사진1 (1).jpg" alt="갤러리 이미지 1"></a></li>
+                            <li><a href="#"><img src="images/내부사진1 (2).jpg" alt="갤러리 이미지 2"></a></li>
+                            <li><a href="#"><img src="images/내부사진1 (3).jpg" alt="갤러리 이미지 3"></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <!-- otherwrap는 banner와 shortcut 묶어줌 -->
+            <div class="otherwrap">
+                <div class="banner">
+                    <a href="#">
+                        <img src="images/노트북사진.jpg" alt="배너 이미지">
+                        <h4 class="bntext">노트북</h4>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="#">
+                        <img src="images/pexels-michael-adeleye-6993182.jpg" alt="바로가기 이미지">
+                        <h4 class="sctext">닌텐도 스위치</h4>
+                    </a>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <footer>
+        <!-- .site는 .btmenu와 .copy를 묶어줌 -->
+        <div class="site">
+            <div class="btlogo">
+                <a href="#"><img src="images/로고사진.jpg" alt="하단로고이미지"></a>
+            </div>
+            <div class="btmenu">
+                <ul>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">신고하기</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>    
+            </div>
+            <div class="copy">
+                COPYRIGHT © by WEBDESIGN. ALL RIGHTS RESERVED
+            </div>
+        </div> <!-- .site 끝 -->
+    </footer>
+</div>
+</body>
+</html>
+    
+    

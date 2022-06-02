@@ -1,0 +1,494 @@
+@charset "utf-8";
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: "맑은 고딕";
+    color: #333333;
+}
+
+body{
+    width: 1200px;
+    background-color: #ffffff;
+    font-size: 20px;
+    height: 1300px;
+}
+
+wrapper{
+    /* display: none; */
+        /* 폭 600px */
+}
+
+/* 레이어 팝업창 배경 스타일 적용 */
+#layer{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: rgba(0,0,0,0.6);
+        z-index: 1;
+        display: none;
+    }
+
+#layer.active{
+        display: block;
+}
+
+/* 레이어 팝업창 스타일 적용 */
+.layer_up{
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    left: 40%;
+    top: 20%;
+    background-color: #fff;
+}
+
+.btn{
+        height: 20px;
+        width: 80px;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        background: #ccc;
+        /* border-radius: 3px; 의미는 테두리를 둥글게 만들어 모서리가 둥근 버튼으로 지정함. 큰값일수록 원형에 가까워짐 */
+        border-radius: 3px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+
+}
+
+.uptitle{
+        margin-top: 30px;
+        text-align: center;
+        line-height: 16px;
+        font-size: 20px;
+        font-weight: bold;
+}
+
+.upbody{
+        padding: 30px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+
+}
+
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+header{
+    /* 상단 높이 */
+    height: 100px; 
+    /* 상단 너비 */
+    width: 1200px;
+}
+
+/* logo와 menu 묶어줌 */
+.top{
+    /* 상단 로고와 메뉴가 들어가는 곳 높이 */
+    height: 300px;
+    /* 상단 로고와 메뉴가 들어가는 곳 너비 */
+    width: 1200px;
+}
+
+/* 로고 영역 스타일 */
+.logo{
+    float: left;
+    /* 로고 영역 높이 */
+    height: 120px;
+    /* 로고 영역 너비 */
+    width: 250px;
+    background-color: white;
+}
+
+.logo img{
+            float: left;
+            height: 42px;
+            width: 180px;
+            margin-top: 50px;
+            margin-left: 50px;
+}
+
+/* 메뉴 영역 스타일 */
+.menu{
+    float: right;
+    /* 메뉴 영역 높이 */
+    height: 100px;
+    /* 메뉴 영역 너비 */
+    width: 800px;
+    z-index: 1;
+}
+
+/* 전체 메뉴 스타일 */
+.navi{
+        float:right;
+        margin-top: 30px;
+        margin-right: 10px;
+}
+
+/* 각 메인 메뉴 스타일 지정*/
+.navi > li{
+        float:left;
+}
+
+.navi > li > a{
+            height: 40px;
+            width: 180px;
+            line-height: 40px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            background-color: black;
+            color: #ffffff;
+}
+
+/* <a> 태그에 마수스를 올릴 떄 스타일 지정 */
+.navi > li > a:hover{
+            background-color: #30a3f3;
+
+}
+
+/* 서브 메뉴 영역 스타일 적용 */
+.submenu{
+        width: 180px;
+        position: absolute;
+        display: none;
+        z-index: 1;
+}
+
+/* 각 서브 메뉴의 <a> 태그 스타일 적용 */
+.submenu > li > a{
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ababab;
+    color: #ffffff;
+}
+
+/* <a> 태그에 마우스를 올릴 때 스타일 적용 */
+.submenu > li > a:hover{
+        background-color: #30a3f3;
+
+}
+
+
+
+/* imgslide와 contents 묶어줌 */
+.bodywrap{
+    /* .imgslide높이 + .contents 높이 */
+    height: 500px;
+    /* .imgslide너비, contents 너비 */
+    width: 1200px;
+}
+
+.imgslide{
+    /* 이미지 슬라이드 높이 */
+    height: 500px;
+    /* 이미지 슬라이드 너비 */
+    width: 1200px;
+    /* 이미지 슬라이드 영역 제한 */
+    position: relative;
+    /* 영역 밖으로 보이지 않도록 제한 */
+    overflow: hidden;
+}
+
+.imgslide > a{
+    position: absolute;
+}
+
+.imgtext{
+    height: 50px;
+    width: 500px;
+    position: absolute;
+    margin: -30px 0 0 -250px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 50px;
+    background-color: rgba(40,40,40,0.5);
+    left: 50%;
+    top:50%;
+}
+
+
+
+/* .tabmenu랑 .otherwrap 묶어줌 */
+.contents{
+    float: left;
+    /* 콘텐츠들(탭메뉴, 배너, 바로가기) 높이 */
+    height: 200px;
+    /* 콘텐츠들(탭메뉴, 배너, 바로가기) 너비 */
+    width: 1200px;
+    /* 공지사항과 갤러리 탭 영역인 <ul class="tabmenu">의 상위 컨테이너인
+    <div class="contents">의 위치가 절대 좌표갓ㅂ을 갖도록 클래스 선택자 
+    .contents 스타일 찾아서 position:absolute 속성을추가해줌 */
+    position: absolute;
+}
+
+.tabmenu{
+    float: left;
+    height: 180px;
+    width: 395px;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+}
+
+/* 탭 타이틀 영역 스타일 적용 */
+.tabmenu > li{
+    float: left;
+    width: 100px;
+    line-height: 30px;
+}
+
+/* 탭 타이틀 영역 <a>태그 스타일 적용 */
+.tabmenu > li > a{
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ccc;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+/* <a>태그에 마우스를 올릴 때 스타일 적용 */
+.tabmenu > li > a:hover{
+    background-color: #eee;
+}
+
+/* 탭 타이틀 첫 번쨰 요소의 <a>태그 스타일 적용 */
+.tabmenu > li:first-child a{
+    border-right: none;
+}
+
+/* active 클래스가 추가된 <a> 태그 스타일 적용 */
+.tabmenu > li.active > a{
+    background-color: #fff;
+}
+
+/* 탭 콘텐츠 영역 스타일 작성 */
+.tabmenu > li div{
+            position: absolute;
+            left: 0px;
+            height: 0px;
+            overflow: hidden;
+}
+
+
+/* 
+.notice{
+    display: none;
+} */
+
+/* .active 클래스가 추가된 탭 콘텐츠 영역 스타일 적성 */
+.tabmenu > li.active div{
+        width: 393px;
+        height: 148px;
+        border: 1px solid #ddd;
+        z-index: 1;
+}
+
+/* 공지사항 콘텐츠 영역 스타일 작성 */
+.notice ul{
+    float: left;
+    width: 393px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* 공지사항 리스트 영역 스타일 작성 */
+.notice li{
+    height: 32px;
+    line-height: 32px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 공지사항 중 2배수 리스트 스타일 적용 */
+.notice li:nth-child(2n){
+    background-color: #ccc;
+}
+
+/* <span> 태그로 구성한 날짜 영역 스타일 적용 */
+.notice li span{
+    float: right; 
+}
+
+/* 공지사항 리스트 영역에 마우스를 올릴 때 스타일 적용 */
+.notice li:hover{
+            font-weight: bold;
+}
+
+.gallery li{
+        float: left;
+        margin-top: 15px;
+        margin-left: 5px;
+}
+
+/* 갤러리 콘탠츠 이미지 영역 스타일 적용 */
+.gallery img{
+    height: 100px;
+    width: 100px;
+    padding:10px;
+}
+
+/* 갤러리 콘텐츠에 마우스를 올릴 떄 스타일 적용 */
+.gallery li:hover{
+        opacity: 0.5;
+}
+
+
+/* .banner와 .shortcut 묶어줌 */
+.otherwrap{
+    float: right;
+    height: 200px;
+    width: 800px;
+}
+
+.banner{
+    float: left;
+    /* 배너 영역 높이 */
+    height: 180px;
+    /* 배너 영역 너비 */
+    width: 395px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.banner img{
+    float: left;
+    height: 180px;
+    width: 395px;
+}
+
+/* 배너 글자 스타일 적용 */
+.bntext{
+        float: left;
+        height: 40px;
+        width: 300px;
+        position: absolute;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        line-height: 40px;
+        background-color: rgba(40,40,40,0.3);
+        left: 450px;
+        top: 80px;
+}
+
+/* 배너 이미지에 마우스를 올릴 떄 스타일 적용 */
+.banner img:hover{
+            opacity: 0.5;
+}
+
+
+.shortcut{
+    float: right;
+    /* 바로가기 영역 높이 */
+    height: 180px;
+    /* 바로가기 영역 너비 */
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 바로가기 이미지 스타일 적용 */
+.shortcut img{
+    float: right;
+    height: 180px;
+    width: 400px;
+}
+
+/* 바로가기 글자 스타일 */
+.sctext{
+    float: right;
+    height: 40px;
+    width: 300px;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 40px;
+    background-color: rgba(40,40,40,0.3);
+    left: 850px;
+    top: 80px;
+}   
+
+/* 바로가기 글자에 마우스를 올릴 떄 스타일 적용 */
+.shortcut img:hover{
+    opacity: 0.5;
+}
+
+
+footer{
+    /* 하단 높이 */
+    height: 250px;
+    /* 하단 너비 */
+    width: 300px;
+    background-color: width;
+  
+}
+
+.btlogo{
+    float: left;
+    /* bottom 로고 영역 높이 */
+    height: 100px;
+    /* bottom 로고 영역 너비 */
+    width: 250px;
+}
+
+/* .btlogo 이미지 스타일 적용 */
+.btlogo img{
+   
+    height: 50px;
+    width: 180px;
+    margin-top: 230px;
+    margin-right: 215px;
+}
+
+/* .btmenu와 copy 묶어줌 */
+.site{
+    float: right;
+    /* 하단 메뉴와 Copyrght 들어가는 곳 높이 */
+    height: 100px;
+    /* 하단 메뉴와 Copyrght 들어가는 곳 너비 */
+    width: 600px;
+}
+
+.btmenu{
+    height: 50px;
+    width: 600px;
+    text-align: right;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 230px;
+    margin-left: 415px;
+}
+
+.btmenu li{
+        margin-top: 10px;
+        display: inline-block;
+        width: 100px;
+}
+
+.btmenu > ul > li:hover{
+    font-weight: bold;
+}
+
+.copy{
+    height:150px;
+    width: 550px;
+    margin-left: 515px;
+}
+
